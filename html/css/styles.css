@@ -6,7 +6,7 @@ body {
     text-align: center;
 }
 header{
-    background: #28a745;
+    background: black ;
     color: white;
     /* espaçamento interno 15px acim e abaixo, e 0px esquerda e direta*/
     padding: 15px 0; 
@@ -14,7 +14,7 @@ header{
 }
 
 nav {
-    background-color: #007bff;
+    background-color: grey;
     padding: 10px;
     display: flex; /* Flex Boxing */
     /* alinhamento na horizontal - espaço entre os links */
@@ -39,10 +39,14 @@ nav a:hover {
     background:  #003d82;
 }
 img{
-    width: 120px;
-    height: auto;
-    margin-right: 40px; /*espaçamento interno a direita*/
-    border-radius: 10px; /*arredondar a imagem*/
+     /* borda com cantos arredondados*/
+     border-radius: 50%;
+     /* largura */
+    width: 100px;
+    /* altura */
+    height: 100px;
+     /* espaçamento externo abaixo */
+    margin-bottom: 10px;
 }
 .container{
     width: 80%;
@@ -81,6 +85,6 @@ th {
     background: red;
 }
 .campos{
-    margin: 20px;
+    margin: 10px;
     justify-content: left;
 }
