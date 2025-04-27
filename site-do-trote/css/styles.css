@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+header{
+    background: black ;
+    color: white;
+    /* espaçamento interno 15px acim e abaixo, e 0px esquerda e direta*/
+    padding: 15px 0; 
+    font-size: 24px;
+}
+
+nav {
+    background-color: grey;
+    padding: 10px;
+    display: flex; /* Flex Boxing */
+    /* alinhamento na horizontal - espaço entre os links */
+    justify-content: space-between;
+    /* alinhamento na vertical */
+    align-items: center;
+}
+#links-menu {
+    display: flex;
+    gap: 15px;
+}
+/* configura o estilo das âncoras que estão dentro do nav */
+nav a {
+    color: white; /* texto branco */
+    text-decoration: none; /* não faz decoração no link */
+    padding: 10px 15px; /* 10px é acima e abaixo 15px é esq e dir */
+    font-size: 18px; /* 18px de tamanho da fonte */
+    background: #005663; /* cor de fundo */
+    border-radius: 5px; /* borda com canto arredondado */
+}
+nav a:hover {
+    background:  #003d82;
+}
+img{
+     /* borda com cantos arredondados*/
+     border-radius: 50%;
+     /* largura */
+    width: 100px;
+    /* altura */
+    height: 100px;
+     /* espaçamento externo abaixo */
+    margin-bottom: 10px;
+}
+.container{
+    width: 80%;
+    margin: 20px auto;/* 20px em cima e embaixo e auto esquerda e direita*/
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th , td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+.laranja{
+    background: orange;
+}
+.preto{
+    background: black;
+    color: white;
+}
+.roxo{
+    background: purple;
+}
+.verde{
+    background: green;
+}
+.vermelho{
+    background: red;
+}
+.campos{
+    margin: 10px;
+    justify-content: left;
+}
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+#calculadora {
+width: 80%;
+margin: 20px auto;/* 20px em cima e embaixo e auto esquerda e direita*/
+background: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+}
+.cs-button-6 {
+    text-align: center;
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 8vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    min-width: 10.875rem;
+    margin: auto;
+    color: #1a1a1a;
+    padding: 0 1.5rem;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid #1a1a1a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+}
+.cs-button-6:before {
+    content: "";
+    width: 0.375rem;
+    height: 100%;
+    background: #1a1a1a;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+    z-index: -1;
+}
+.cs-button-6 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+}
+.cs-button-6 .cs-icon path {
+    transition: fill 0.3s;
+}
+.cs-button-6:hover {
+    color: #fff;
+}
+.cs-button-6:hover:before {
+    width: 100%;
+}
+.cs-button-6:hover .cs-icon path {
+    fill: #fff;
+}
+:root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+                            
